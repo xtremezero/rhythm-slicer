@@ -1,0 +1,9 @@
+﻿@echo off
+echo Checking dependencies...
+IF NOT EXIST "node_modules\" (
+    echo node_modules not found. Installing dependencies...
+    npm install
+)
+echo Building Tauri project...
+npm run tauri build
+pause
